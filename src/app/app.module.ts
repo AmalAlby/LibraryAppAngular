@@ -12,11 +12,16 @@ import { EditComponent } from './edit/edit.component';
 import { IssuebookComponent } from './issuebook/issuebook.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { UserregComponent } from './userreg/userreg.component';
 
 const myroute:Routes=[
   {
     path:"",
     component:AdminloginComponent
+  },
+  {
+    path:"registration",
+    component:UserregComponent
   },
   {
     path:"entry",
@@ -54,7 +59,8 @@ const myroute:Routes=[
     EditComponent,
     IssuebookComponent,
     NavbarComponent,
-    AdminloginComponent
+    AdminloginComponent,
+    UserregComponent
   ],
   imports: [
     BrowserModule,
