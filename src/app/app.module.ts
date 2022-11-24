@@ -13,6 +13,7 @@ import { IssuebookComponent } from './issuebook/issuebook.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { UserregComponent } from './userreg/userreg.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
 
 const myroute:Routes=[
   {
@@ -22,6 +23,10 @@ const myroute:Routes=[
   {
     path:"registration",
     component:UserregComponent
+  },
+  {
+    path:"login",
+    component:UserloginComponent
   },
   {
     path:"entry",
@@ -60,7 +65,8 @@ const myroute:Routes=[
     IssuebookComponent,
     NavbarComponent,
     AdminloginComponent,
-    UserregComponent
+    UserregComponent,
+    UserloginComponent
   ],
   imports: [
     BrowserModule,
