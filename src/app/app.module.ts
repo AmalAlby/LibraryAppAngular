@@ -9,10 +9,11 @@ import { ViewComponent } from './view/view.component';
 import { DeleteComponent } from './delete/delete.component';
 import { SearchComponent } from './search/search.component';
 import { EditComponent } from './edit/edit.component';
+import { IssuebookComponent } from './issuebook/issuebook.component';
 
 const myroute:Routes=[
   {
-    path:"",
+    path:"entry",
     component:BookentryComponent
   },
   {
@@ -30,6 +31,10 @@ const myroute:Routes=[
   {
     path:"edit",
     component:EditComponent
+  },
+  {
+    path:"issue",
+    component:IssuebookComponent
   }
 ]
 
@@ -40,7 +45,8 @@ const myroute:Routes=[
     ViewComponent,
     DeleteComponent,
     SearchComponent,
-    EditComponent
+    EditComponent,
+    IssuebookComponent
   ],
   imports: [
     BrowserModule,
