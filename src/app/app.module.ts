@@ -11,8 +11,13 @@ import { SearchComponent } from './search/search.component';
 import { EditComponent } from './edit/edit.component';
 import { IssuebookComponent } from './issuebook/issuebook.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 const myroute:Routes=[
+  {
+    path:"",
+    component:AdminloginComponent
+  },
   {
     path:"entry",
     component:BookentryComponent
@@ -48,7 +53,8 @@ const myroute:Routes=[
     SearchComponent,
     EditComponent,
     IssuebookComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdminloginComponent
   ],
   imports: [
     BrowserModule,
