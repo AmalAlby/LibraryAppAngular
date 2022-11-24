@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookentryComponent } from './bookentry/bookentry.component';
 import { ViewComponent } from './view/view.component';
+import { DeleteComponent } from './delete/delete.component';
 
 const myroute:Routes=[
   {
@@ -15,6 +16,10 @@ const myroute:Routes=[
   {
     path:"view",
     component:ViewComponent
+  },
+  {
+    path:"delete",
+    component:DeleteComponent
   }
 ]
 
@@ -22,7 +27,8 @@ const myroute:Routes=[
   declarations: [
     AppComponent,
     BookentryComponent,
-    ViewComponent
+    ViewComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
