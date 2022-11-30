@@ -18,7 +18,7 @@ export class AdminloginComponent {
     let data:any={"username":this.username,"password":this.password}
     console.log(data)
 
-    if(data.username=="user" && data.password=="12345"){
+    if(data.username=="user" && data.password=="123456"){
       this.route.navigate(["/entry"])
     }
     else{
