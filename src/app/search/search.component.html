@@ -2,19 +2,62 @@
 <div class="container">
     <div class="row">
         <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
             <div class="row g-3 mt-4">
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center text-danger">
                     <h1>BOOK SEARCH</h1>
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label for="" class="form-label"><h3>Book Title</h3></label>
-                    <input type="text" class="form-control">
+                    <input name="title" [(ngModel)]="title" type="text" class="form-control">
 
                 </div>
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
-                    <button class="btn btn-success">Search</button>
+                    <button (click)="read()" class="btn btn-success">Search</button>
                 </div>
             </div>
+
+
+            <div class="row g-3 mt-4" *ngFor="let i of searchdata">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Book Name</th>
+                                <th scope="col">Author</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Publisher</th>
+                                <th scope="col">Distributor</th>
+                                <th scope="col">Language</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">Published Year</th>
+                                <th scope="col">Book Image</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">{{i.id}}</th>
+                                <td>{{i.name}}</td>
+                                <td>{{i.author}}</td>
+                                <td>{{i.description}}</td>
+                                <td>{{i.publisher}}</td>
+                                <td>{{i.distributor}}</td>
+                                <td>{{i.language}}</td>
+                                <td>{{i.price}}</td>
+                                <td>{{i.year}}</td>
+                                <td><img src="{{i.image}}" alt="" style="width:18rem ; height:200px;"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 text-center">
+                        <button (click)="delete(i.id)" class="btn btn-danger">Delete Book</button>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
     </div>
 </div>

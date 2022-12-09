@@ -14,14 +14,14 @@ export class BookentryComponent {
   publisher=""
   lang=""
   dist=""
-  ry=""
+  year=""
   price=""
   image=""
 
   constructor(private api:ApiService){}
 
   readvalues=()=>{
-    let data:any={"title":this.title,"author":this.author,"description":this.description,"publisher":this.publisher,"lang":this.lang,"dist":this.dist,"ry":this.ry,"price":this.price,"image":this.image}
+    let data:any={"name":this.title,"author":this.author,"description":this.description,"publisher":this.publisher,"distributor":this.dist,"language":this.lang,"image":this.image,"year":this.year,"price":this.price}
     console.log(data)
     this.api.booksentry(data).subscribe(
       (response:any)=>{
@@ -35,7 +35,7 @@ export class BookentryComponent {
           this.publisher=""
           this.lang=""
           this.dist=""
-          this.ry=""
+          this.year=""
           this.price=""
           this.image=""
         }
