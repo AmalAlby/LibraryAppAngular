@@ -29,4 +29,14 @@ export class ApiService {
     return this.http.post("http://localhost:8080/issue",idata)
   }
 
+  userreg=(reg:any)=>{
+    return this.http.post("http://localhost:8080/reg",reg)
+  }
+
+  userview=()=>{
+    return this.http.get("http://localhost:8080/uview")
+  }
+
+
+
 }
