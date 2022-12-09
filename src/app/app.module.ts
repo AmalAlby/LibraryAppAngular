@@ -16,6 +16,9 @@ import { UserregComponent } from './userreg/userreg.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UserviewComponent } from './userview/userview.component';
+import { UsernavbarComponent } from './usernavbar/usernavbar.component';
+import { UsersearchComponent } from './usersearch/usersearch.component';
 
 const myroute:Routes=[
   {
@@ -53,6 +56,14 @@ const myroute:Routes=[
   {
     path:"issue",
     component:IssuebookComponent
+  },
+  {
+    path:"uview",
+    component:UserviewComponent
+  },
+  {
+    path:"usearch",
+    component:UsersearchComponent
   }
 ]
 
@@ -68,7 +79,10 @@ const myroute:Routes=[
     NavbarComponent,
     AdminloginComponent,
     UserregComponent,
-    UserloginComponent
+    UserloginComponent,
+    UserviewComponent,
+    UsernavbarComponent,
+    UsersearchComponent
   ],
   imports: [
     BrowserModule,
